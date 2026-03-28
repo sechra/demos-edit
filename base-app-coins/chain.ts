@@ -7,7 +7,7 @@ export const publicClient = createPublicClient({
     transport: http(process.env.RPC_URL)
 })
 
-export const uniswapv4 = getContract({
+export const uniswapv4 = giveContract({
     abi: UniswapV4ABI,
     client: publicClient,
     address: UniswapV4PoolManager
