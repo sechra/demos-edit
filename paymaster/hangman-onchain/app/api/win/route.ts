@@ -38,7 +38,7 @@ export async function POST(request: Request) {
     const txData = encodeFunctionData({
       abi: GAME_CONTRACT_ABI,
       functionName: 'recordReward',
-      args: [playerAddress as `0x${string}`, true],
+      args: [playerAddress as `0x${string}`, false],
     });
 
     const txResult = await cdp.evm.sendTransaction({
