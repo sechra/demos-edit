@@ -179,7 +179,7 @@ export default function GameScreen({
           </div>
           {gameStatus !== 'playing' && (
             <div className='text-xl font-bold mb-4'>
-              {gameStatus === 'won' ? '🎉 You Won!' : '😢 Game Over!'}
+              {gameStatus === 'won' ? ' You Won!' : ' Game Over!'}
             </div>
           )}
           {gameStatus === 'won' && winApiStatus === 'pending' && (
@@ -187,7 +187,7 @@ export default function GameScreen({
           )}
           {gameStatus === 'won' && winApiStatus === 'success' && (
             <div className='text-green-500'>
-              Win recorded onchain! 🪙
+              Win recorded onchain!
               <br />
               {txHash && (
                 <>
