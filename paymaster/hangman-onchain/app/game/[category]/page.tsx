@@ -40,7 +40,7 @@ export default function GameScreen({
   const [winApiError, setWinApiError] = useState<string | null>(null);
   const [txHash, setTxHash] = useState<string | null>(null);
 
-  const MAX_WRONG_GUESSES = 3;
+  const MAX_WRONG_GUESSES = 2;
 
   useEffect(() => {
     const loadCategory = async () => {
