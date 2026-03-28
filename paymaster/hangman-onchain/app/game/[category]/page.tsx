@@ -27,12 +27,12 @@ export default function GameScreen({
   const router = useRouter();
   const [currentWord, setCurrentWord] = useState<Word | null>(null);
   const [guessedLetters, setGuessedLetters] = useState<string[]>([]);
-  const [wrongGuesses, setWrongGuesses] = useState(0);
+  const [wrongGuesses, setWrongGuesses] = useState(1);
   const [gameStatus, setGameStatus] = useState<'playing' | 'won' | 'lost'>(
     'playing'
   );
-  const [availableHints, setAvailableHints] = useState(0);
-  const [loading, setLoading] = useState(true);
+  const [availableHints, setAvailableHints] = useState(1);
+  const [loading, setLoading] = useState(false);
   const account = useAccount();
   const [winApiStatus, setWinApiStatus] = useState<
     'idle' | 'pending' | 'success' | 'error'
